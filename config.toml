@@ -1,0 +1,7 @@
+baseURL = "http://1o0.jp/"
+languageCode = "ja"
+title = "1o0"
+theme = "hugo-zen"
+
+[permalinks]
+  blog = "/:year/:month/:slug/"
