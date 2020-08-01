@@ -5,3 +5,4 @@ theme = "hugo-zen"
 
 [permalinks]
   blog = "/:year/:month/:slug/"
+  monthly = "/:year/:month/"

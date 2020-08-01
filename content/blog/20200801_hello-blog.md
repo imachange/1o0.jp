@@ -1,6 +1,6 @@
 ---
 title: "ブログはじめました"
-date: 2020-08-01T03:00:06+09:00
+date: 2020-08-01T03:00:00+09:00
 draft: false
 slug: "hello-blog"
 ---
