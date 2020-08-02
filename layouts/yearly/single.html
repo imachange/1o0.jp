@@ -1,0 +1,13 @@
+{{define "main"}}
+{{$archive_year := .Date.Year}}
+<h1>{{$archive_year}}年</h1>
+<ul>
+{{range (where .Site.Pages "Section" "post").ByDate}}
+{{if eq .Date.Year $archive_year}}
+<li>{{printf "%04d/%02d/%02d" .Date.Year .Date.Month .Date.Day}}<br />< ahref="{{.Permalink}}">{{.Title}}</a></li>
+{{end}}
+{{end}}
+</ul>
+{{end}}
+{{ template "main" . }}
+{{ partial "footer.html" . }}
