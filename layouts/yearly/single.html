@@ -1,10 +1,11 @@
+{{ partial "header.html" . }}
 {{define "main"}}
 {{$archive_year := .Date.Year}}
 <h1>{{$archive_year}}年</h1>
 <ul>
-{{range (where .Site.Pages "Section" "post").ByDate}}
+{{range .Site.RegularPages}}
 {{if eq .Date.Year $archive_year}}
-<li>{{printf "%04d/%02d/%02d" .Date.Year .Date.Month .Date.Day}}<br />< ahref="{{.Permalink}}">{{.Title}}</a></li>
+<li>{{printf "%04d/%02d/%02d" .Date.Year .Date.Month .Date.Day}}<br /><a href="{{.Permalink}}">{{.Title}}</a></li>
 {{end}}
 {{end}}
 </ul>
