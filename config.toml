@@ -2,7 +2,9 @@ baseURL = "http://1o0.jp/"
 languageCode = "ja"
 title = "1o0"
 theme = "hugo-zen"
-
+enableGitInfo = true
 [permalinks]
-  blog = "/:year/:month/:slug/"
-  diary = "/:year/:month/:day/"
+blog = ":year:month:day/:section/:slug/"
+diary = ":year:month:day/"
+archive_yearly = ":year/"
+archive_monthly = ":year:month/"
