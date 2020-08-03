@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日暮誌 on 1o0</title>
+    <link>http://1o0.jp/daily/</link>
+    <description>Recent content in 日暮誌 on 1o0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 02 Aug 2020 00:00:20 +0900</lastBuildDate>
+    
+	<atom:link href="http://1o0.jp/daily/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>オープンな日報もはじめました　- 2020年08月01日の日暮誌</title>
+      <link>http://1o0.jp/2020/08/01/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://1o0.jp/2020/08/01/</guid>
+      <description>やったこと  日勤(9:30-18:30) ブログ作成  思ったこと  日報を書こうと思った。  食べたもの  朝  パン   昼  パン   夕方  にんにくたっぷり鶏ひきにくとなすのパスタ ビール    </description>
+    </item>
+    
+  </channel>
+</rss>
