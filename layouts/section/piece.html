@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+	<main role="main">
+      <h1>言葉片</h1>
+      {{ range .RegularPages }}
+      <article>{{.Content}}</article>
+      {{ end }}
+	</main>
+    はーい
+</div>
+{{ partial "footer.html" . }}

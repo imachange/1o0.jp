@@ -4,6 +4,7 @@
     <h2>新着記事</h2>
     <ul>
     {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    {{ if ne .Section "piece" }}
     <li>
     <b>{{ with .Section }}{{ $secURL := printf "/%s/" . | urlize }} [<a href="{{ $secURL | relURL }}">{{ end }}{{ with .Parent }}{{ .Title }}{{ end }}</a>] <a href="{{.RelPermalink}}">{{.Title}}</a></b>
     <time>{{.Date.Format "2006-01-02"}}</time>
@@ -12,10 +13,12 @@
     {{ with .Description }}<br>&raquo; {{ . }}{{ end }}
     </li>
     {{ end }}
+    {{ end }}
     </ul>
     <h2>更新記事</h2>
     <ul>
-      {{ range first 5 .Site.RegularPages.ByLastmod.Reverse }}
+    {{ range first 5 .Site.RegularPages.ByLastmod.Reverse }}
+    {{ if ne .Section "piece" }}
     <li>
     <b>{{ with .Section }}{{ $secURL := printf "/%s/" . | urlize }} [<a href="{{ $secURL | relURL }}">{{ end }}{{ with .Parent }}{{ .Title }}{{ end }}</a>] <a href="{{.RelPermalink}}">{{.Title}}</a></b>
     <time>{{.Date.Format "2006-01-02"}}</time>
@@ -23,6 +26,7 @@
     {{ if .Draft }} <span class="caution">#draft</span>{{ end }}
     {{ with .Description }}<br>&raquo; {{ . }}{{ end }}
     </li>
+    {{ end }}
     {{ end }}
     </ul>
     <h3>セクション一覧</h3>
