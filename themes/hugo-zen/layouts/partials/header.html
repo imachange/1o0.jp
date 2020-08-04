@@ -19,18 +19,9 @@
 	<header role="banner">
 		<div class="header-logo">
 			<!--<a href="/"><img src="{{ .Site.Params.logo }}" width="60" height="60" alt="{{ .Site.Title }}"></a>-->
-		{{- define "breadcrumb" }}
-		  {{- if .Parent }}
-		    {{- template "breadcrumb" .Parent }}
-		  {{- else if not .IsHome }}
-		    {{- template "breadcrumb" .Site.Home }}
-		  {{- end }}
-		  <li>{{ .Title }}
-		{{- end }}
-
-		<ol>
-		  {{- template "breadcrumb" . }}
-		</ol>
+			  <nav class="breadcrumb">
+<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .Section }}{{ $secURL := printf "/%s/" (.Section | urlize) }} &raquo; <a href="{{ $secURL | relURL }}">{{ .Site.Data.section.remark.name }}</a>{{ end }}
+</nav>
 		</div>
 		{{ if eq $isHomePage true }}<h1 class="site-title">{{ .Site.Title }}</h1>{{ end }}
 	</header>
