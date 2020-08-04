@@ -18,7 +18,19 @@
 
 	<header role="banner">
 		<div class="header-logo">
-			<a href="/"><img src="{{ .Site.Params.logo }}" width="60" height="60" alt="{{ .Site.Title }}"></a>
+			<!--<a href="/"><img src="{{ .Site.Params.logo }}" width="60" height="60" alt="{{ .Site.Title }}"></a>-->
+		{{- define "breadcrumb" }}
+		  {{- if .Parent }}
+		    {{- template "breadcrumb" .Parent }}
+		  {{- else if not .IsHome }}
+		    {{- template "breadcrumb" .Site.Home }}
+		  {{- end }}
+		  <li>{{ .Title }}
+		{{- end }}
+
+		<ol>
+		  {{- template "breadcrumb" . }}
+		</ol>
 		</div>
 		{{ if eq $isHomePage true }}<h1 class="site-title">{{ .Site.Title }}</h1>{{ end }}
 	</header>
