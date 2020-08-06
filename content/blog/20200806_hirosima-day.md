@@ -64,3 +64,5 @@ categories: ["時事"]
 ---
 
 このごろ、祈りとはなんなのか、ということを考えています。
+
+青空文庫に原民喜の[広島の牧歌](https://www.aozora.gr.jp/cards/000293/card60447.html)と[より美しく―より和やかに](https://www.aozora.gr.jp/cards/000293/card60516.html)が追加されていました。
