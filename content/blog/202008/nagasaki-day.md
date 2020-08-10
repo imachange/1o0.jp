@@ -1,7 +1,7 @@
 ---
 title: "長崎原爆忌"
 date: 2020-08-09T22:03:09+09:00
-draft: true
+draft: false
 slug: "nagasaki-day"
 ---
 
