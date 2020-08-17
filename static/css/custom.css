@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #FCFCFC;
+  background-color: #464646;
+    color: #dbdbdb;
 }
 
 h1 { font-size: 2.1rem; }
