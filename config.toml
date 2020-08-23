@@ -4,11 +4,11 @@ title = "1o0"
 theme = "hugo-zen"
 enableGitInfo = true
 [permalinks]
-blog = ":year:month:day/:section/:slug/"
-diary = ":year:month:day/"
-ymk = ":year:month:day/:slug/"
+blog = ":year:/month:day/:section/:slug/"
+diary = ":year:/:month:day/"
+ymk = ":year:/:month:day/:slug/"
 archive_yearly = ":year/"
-archive_monthly = ":year:month/"
+archive_monthly = ":year:/:month/"
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
