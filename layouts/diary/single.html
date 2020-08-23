@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+{{$archive_year := .Date.Year}}
+{{$archive_month := .Date.Month}}
+{{$archive_day := .Date.Day}}
+<h1>{{$archive_year}}年{{printf "%02d" $archive_month}}月{{$archive_day}}日</h1>
+<ul>
+{{range .Site.RegularPages.ByDate}}
+{{if eq .Date.Year $archive_year}}{{if eq .Date.Month $archive_month}}{{if eq .Date.Day $archive_day}}
+{{ if ne .Section "diary" }}
+<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+{{end}}{{end}}{{end}}{{end}}
+{{end}}
+</ul>
+{{.Content}}
+{{ partial "footer.html" . }}
