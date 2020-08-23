@@ -1,7 +1,7 @@
 baseURL = "http://1o0.jp/"
 languageCode = "ja"
 title = "1o0"
-theme = "hugo-zen"
+theme = "ananke"
 enableGitInfo = true
 [permalinks]
 blog = ":year:month:day/:section/:slug/"
