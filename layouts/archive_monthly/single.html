@@ -4,7 +4,7 @@
 <h1>{{$archive_year}}年{{printf "%02d" $archive_month}}月</h1>
 今月の記事
 <ul>
-{{range .Site.RegularPages.ByDate}}
+{{range .Site.RegularPages.ByDate.Reverse}}
 {{if eq .Date.Year $archive_year}}{{if eq .Date.Month $archive_month}}
 <li>{{printf "%04d/%02d/%02d" .Date.Year .Date.Month .Date.Day}}<br /><a href="{{.Permalink}}">{{.Title}}</a></li>
 {{end}}{{end}}
