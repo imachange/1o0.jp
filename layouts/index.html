@@ -4,7 +4,7 @@
     <h2>新着記事</h2>
     {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
     <section>
-      <h3>{{ with .Section }}{{ $secURL := printf "/%s/" . | urlize }} [<a href="{{ $secURL | relURL }}">{{ end }}{{ with .FirstSection }}{{ .Title }}{{ end }}</a>{{ if ne .Parent .FirstSection }} - {{ with .Parent }}<a href="{{ .URL }}">{{ .Title }}</a>{{end}}{{ end }}</a>] <a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+      <h3>{{ with .Section }}{{ $secURL := printf "/%s/" . | urlize }} [<a href="{{ $secURL | relURL }}">{{ end }}{{ with .FirstSection }}{{ .Title }}{{ end }}</a>{{ if ne .Parent .FirstSection }} - {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{end}}{{ end }}</a>] <a href="{{.RelPermalink}}">{{.Title}}</a></h3>
       <p><time>{{.Date.Format "2006年01月02日"}}作成</time>{{if lt .Date .Lastmod}}・{{.Lastmod.Format "2006年01月02日"}}更新{{end}}{{ with .Params.tags }}{{ range sort . }}{{ $tag := lower . }}{{ $tagURL := printf "/tags/%s/" $tag | urlize }} #<a href="{{ $tagURL | relURL }}">{{ $tag }}</a>{{ end }}{{ end }}{{ if .Draft }}<span class="caution">#draft</span>{{ end }}</p>
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
     </section>
@@ -14,7 +14,7 @@
     {{if lt .Date .Lastmod}}<section>
       <h3>{{ with .Section }}{{ $secURL := printf "/%s/" . | urlize }} [<a
           href="{{ $secURL | relURL }}">{{ end }}{{ with .FirstSection }}{{ .Title }}{{ end }}</a>{{ if ne .Parent .FirstSection }}
-        - {{ with .Parent }}<a href="{{ .URL }}">{{ .Title }}</a>{{end}}{{ end }}</a>] <a
+        - {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{end}}{{ end }}</a>] <a
           href="{{.RelPermalink}}">{{.Title}}</a></h3>
       <p>
         <time>{{.Date.Format "2006年01月02日"}}作成</time>{{if lt .Date .Lastmod}}・{{.Lastmod.Format "2006年01月02日"}}更新{{end}}{{ with .Params.tags }}{{ range sort . }}{{ $tag := lower . }}{{ $tagURL := printf "/tags/%s/" $tag | urlize }}
@@ -23,27 +23,48 @@
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
     </section>{{end}}
     {{ end }}
-    <h2>セクション一覧</h2>
-  <section>
+    <h2>1o0 Projectの内容</h2>
 {{- define "hierarchy" }}
   {{- range first 1 .Pages }}
     {{- if .IsSection }}
     {{ template "hierarchy" . }}
     {{ else }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <p>{{ if ne .Parent .FirstSection }}[{{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{end}}] {{ end }}<a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
     {{ end }}
     {{- end }}
 {{- end }}
 {{ range .Sections }}
-<h3><a href="{{ .URL }}">{{ .Title }}</a></h3><ul>
+<section>
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ template "hierarchy" .CurrentSection }}
-{{ with .CurrentSection }}
+{{ with .CurrentSection }}<ul>
 {{ range .Sections }}
-<a href="{{ .URL }}">{{ .Title }}</a>
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{ end }}
 {{ end }}
 </ul>
+</section>
 {{ end }}
-    </section>
-	</main>
+<h2>タグ一覧</h2>
+<ul>
+  {{- range .Site.Taxonomies.tags.ByCount }}
+  <li><a href="{{ "/tags/" | relLangURL }}{{ .Term | urlize }}">{{ .Term }}</a> ({{ .Count }})
+    {{- end }}
+</ul>
+  </main>
+  {{ with .Params.Taxonomies }}
+  {{.Params.Taxonomies}}
+  <ul class="tags">
+    {{- range $taxonomyName, $taxonomy := .Params.Taxonomies }}
+    {{- $taxonomyUrl := print ("/" | relLangURL) ($taxonomyName | urlize) }}
+    <li><a href="{{ $taxonomyUrl }}">{{ $taxonomyName }}</a>
+      <ul>
+        {{- range $termName, $entries := $taxonomy }}
+        <li><a href="{{ print $taxonomyUrl "/" ($termName | urlize) }}">{{ $termName }}</a> ({{ $entries.Count }})
+          {{- end }}
+      </ul>
+    </li>
+  </ul>
+  {{ end }}
+  {{ end }}
 {{ partial "footer.html" . }}

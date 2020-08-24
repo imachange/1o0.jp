@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/css/skeleton.css">
 <link rel="stylesheet" href="/css/custom.css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
-<title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+<title>{{ $isHomePage := eq .LinkTitle .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 </head>
 <body>
 
@@ -31,9 +31,10 @@
 			    <li><a href="{{ .node.Permalink }}">{{ .node.LinkTitle }}</a>
 			  {{- end }}
 			{{- end }}
+            {{ if ne $isHomePage true }}
 			<ol class="breadcrumb">
   {{- template "breadcrumb" (dict "node" . "start" .) }}
-</ol>
+</ol>{{ end }}
 		</div>
-		{{ if eq $isHomePage true }}<h1 class="site-title">{{ .Site.Title }}</h1>{{ end }}
+		{{ if eq $isHomePage true }}<h1 class="site-title">{{ .Title }}</h1>{{ end }}
 	</header>

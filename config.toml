@@ -4,8 +4,8 @@ title = "1o0"
 theme = "hugo-zen"
 enableGitInfo = true
 [permalinks]
-ats = ":sections/:slug-:year:month:day/"
-ymk = ":year:/:month/:day/:slug/"
+ats = ":sections/:slug-:year:month/"
+ymk = ":sections/:slug-:year:month/"
 archive_daily = ":year:/:month:/:day/"
 archive_monthly = ":year:/:month/"
 archive_yearly = ":year/"
