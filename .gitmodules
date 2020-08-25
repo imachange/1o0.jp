@@ -1,9 +1,9 @@
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/budparr/gohugo-theme-ananke.git
-[submodule "themes/1o0.theme"]
-	path = themes/1o0.theme
-	url = https://github.com/imachange/1o0.theme.git
 [submodule "1o0.env"]
 	path = 1o0.env
 	url = https://github.com/imachange/1o0.env.git
+[submodule "themes/1o0_themes"]
+	path = themes/1o0_themes
+	url = https://github.com/imachange/1o0_theme.git
