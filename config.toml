@@ -1,0 +1,4 @@
+baseURL = "http://1o0.jp/"
+languageCode = "ja"
+title = "1o0 Project"
+theme = "1o0.theme"
