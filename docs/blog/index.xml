@@ -6,17 +6,12 @@
     <description>Recent content in Blogs on 1o0 Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-<<<<<<< HEAD
     <lastBuildDate>Sat, 14 Nov 2020 03:38:06 +0900</lastBuildDate>
-=======
-    <lastBuildDate>Sat, 14 Nov 2020 00:56:46 +0900</lastBuildDate>
->>>>>>> origin/main
     
 	<atom:link href="http://1o0.jp/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
       <title>14 VercelからGitHubPageへの引っ越し</title>
       <link>http://1o0.jp/blog/2011/moving-vercel-github/</link>
       <pubDate>Sat, 14 Nov 2020 03:38:06 +0900</pubDate>
@@ -39,8 +34,6 @@ $ git add + $ git commit + $ git pushする。</description>
     </item>
     
     <item>
-=======
->>>>>>> origin/main
       <title>ブログ書き始め</title>
       <link>http://1o0.jp/blog/2011/hello-blog/</link>
       <pubDate>Sat, 14 Nov 2020 00:56:46 +0900</pubDate>
@@ -49,7 +42,10 @@ $ git add + $ git commit + $ git pushする。</description>
       <description>また、ひとつ、齢をとった。
 これを機にブログをはじめる。はじめるというより、つくりなおす、といった方が良いのだろうか。
 性懲りもなく。性懲りのないついでに、雑感を述べておきたい。
-アラフォーというコトバについて。 アラフォーになった。
+&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD
+=======
+       origin/main アラフォーというコトバについて。{#around40}
+        アラフォーになった。
 アラフォーという言葉が一般的になったのは2008年くらいだろうか。
 天海祐希や松下由樹が出演していたドラマや当時のアラフォー世代に対象を定めたコンピレーション・アルバムが発売されていた。
 当時のアラフォーは、ちょっと前にアラサーといわれていた年齢層がそのままシフトしてきたようなカタチではなかったか。
