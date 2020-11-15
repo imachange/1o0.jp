@@ -1,5 +1,5 @@
 ---
-title: "14 VercelからGitHubPageへの引っ越し"
+title: "VercelからGitHubPageへの引っ越し"
 date: 2020-11-14T03:38:06+09:00
 draft: false
 slug: "moving-vercel-github"
@@ -89,6 +89,8 @@ Custom domainのフォームに準備した独自ドメインを入力して、S
 しばらく待つとSSL化されて、"https://example.com"でアクセスできるようになる。
 
 それまでは気長に待つ。
+
+* 補足：[DNSの切り替え待ちで確認するべきこと]({{< ref "201115-DNSの切り替え待ちで確認するべきこと.md" >}})
 
 ### 今後のこと
 
