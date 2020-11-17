@@ -4,26 +4,36 @@
   
   <url>
     <loc>http://1o0.jp/</loc>
-    <lastmod>2020-11-15T08:23:22+09:00</lastmod>
+    <lastmod>2020-11-18T02:46:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/trust2write/</loc>
+    <lastmod>2020-11-18T02:46:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://1o0.jp/blog/</loc>
+    <lastmod>2020-11-15T23:51:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/www/</loc>
+    <lastmod>2020-11-15T23:31:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/check-switch-dns/</loc>
     <lastmod>2020-11-15T08:23:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/2011/check-switch-dns/</loc>
-    <lastmod>2020-11-15T08:23:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://1o0.jp/blog/2011/moving-vercel-github/</loc>
+    <loc>http://1o0.jp/blog/moving-vercel-github/</loc>
     <lastmod>2020-11-14T03:38:06+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/2011/hello-blog/</loc>
+    <loc>http://1o0.jp/blog/hello-blog/</loc>
     <lastmod>2020-11-14T00:56:46+09:00</lastmod>
   </url>
   
