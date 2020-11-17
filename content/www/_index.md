@@ -14,3 +14,5 @@ slogan: "いわゆるリンク集"
     * [Messenger](https://www.messenger.com/)
 * [Twitter](https://twitter.com/home)
 * [GitHub](https://github.com/)
+
+[TOP](/)
