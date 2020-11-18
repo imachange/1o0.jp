@@ -4,7 +4,32 @@
   
   <url>
     <loc>http://1o0.jp/</loc>
-    <lastmod>2020-11-18T10:41:21+09:00</lastmod>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/categories/</loc>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/categories/it/</loc>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/dic/unix_os/</loc>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/dic/unix_shell/</loc>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/dic/</loc>
+    <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
@@ -55,10 +80,6 @@
   <url>
     <loc>http://1o0.jp/blog/202011/14-hello-blog/</loc>
     <lastmod>2020-11-14T00:56:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://1o0.jp/categories/</loc>
   </url>
   
   <url>
