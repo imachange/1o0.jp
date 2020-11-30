@@ -1,0 +1,64 @@
+<h1>VercelからGitHubPageへの引っ越し</h1>
+<p>リニューアル前には<a href="https://vercel.com/">Vercel</a>をつかってホストしていたが、なぜかつかえなくなった。</p>
+<p>理由がわからないので、Github Pagesに移行することにした。</p>
+<!-- more -->
+<h2 id="so-far">これまでの構成</h2>
+<p>ブログをつくりなおす旨、前回のブログでは宣言した。</p>
+<p>リニューアル前のブログでは次の手順で記事を更新していた。</p>
+<ol>
+<li>ローカルでMarkdownファイルを作成する。</li>
+<li>Git add + commit + push</li>
+<li>(ここから自動)Github上のリモートリポジトリが更新される。</li>
+<li>リモートリポジトリの更新を検知して、Vercelがブログをビルドする。</li>
+</ol>
+<p>しかし、なぜか、以下のエラーが頻発して更新できなくなった。</p>
+<pre><code>Error: module &quot;[NAME]&quot; not found; either add it as a Hugo Module or store it in &quot;[THEME_DIR]&quot;.: module does not exist
+</code></pre><p>原因探求に時間を食いたくなかったので、ホスト先を移行することにした。</p>
+<h2 id="candidate">移転先の候補</h2>
+<p>Githubとの連携を軸に考えると、Vercelからの移転先は以下の2つに絞られる。</p>
+<ol>
+<li><a href="https://www.netlify.com/">Netlify</a></li>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+</ol>
+<p>NetlifyはVercelの前につかっていたということもあるし、今回はビルドで転んでいるので、同様のつまずきがあると面倒だと思った。</p>
+<p>そんなわけで、今までつかったことのないGitHub Pageをつかうことにした。</p>
+<h2 id="move">移行の手順</h2>
+<h3 id="add_publishDir_canonifyurl">【config.toml】publishDirとcanonifyurlを追加。</h3>
+<p>config.tomlに二行、設定項目を追加した。</p>
+<pre><code>publishDir = &quot;docs&quot;
+canonifyurls = true
+</code></pre><p><code>publishDir</code>は、<code>$ hugo</code>コマンドで生成したファイル群を出力するフォルダを指定する。<code>docs</code>にするのがGitHub Pageの設定の問題。</p>
+<p><code>canonifyurls = true</code>にすると、たとえ、どこで出力されようとも、ブログ内のURIは<code>baseurl</code>で指定したURIを基準にする。</p>
+<p>書き換えを行ったら<code>$ hugo</code>コマンドを実行。</p>
+<p><code>$ git add</code> + <code>$ git commit</code> + <code>$ git push</code>する。</p>
+<h3 id="dns設定aコードの書き換え独自ドメイン利用の場合">【DNS設定】Aコードの書き換え※独自ドメイン利用の場合。</h3>
+<p><a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site - GitHub Docs</a>を参照。</p>
+<p>利用しているDNSサービスのダッシュボートでAレコードを以下の数値に書き換える。</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<h3 id="githubgithub-pagesの設定">【GitHub】Github Pagesの設定</h3>
+<p>GitHubでブログリポジトリの「settings」タブを開く。</p>
+<p>スクロールしていって、GitHub Pagesの項目を見つける。</p>
+<p>Custom domainのフォームに準備した独自ドメインを入力して、Saveボタンをクリック。</p>
+<p>しばらくしてから、Custom domainに設定したURI&quot;http://example.com&quot;にアクセスしてみる。</p>
+<p>アクセスできたら、Enforce HTTPSのチェックを入れる。</p>
+<p>しばらく待つとSSL化されて、&ldquo;<a href="https://example.com">https://example.com</a>&quot;でアクセスできるようになる。</p>
+<p>それまでは気長に待つ。</p>
+<ul>
+<li>補足：<a href="http://localhost:1313/blog/202011/15-check-switch-dns/">DNSの切り替え待ちで確認するべきこと</a></li>
+</ul>
+<h3 id="今後のこと">今後のこと</h3>
+<p>GitHub Pagesに引っ越すことができた。</p>
+<p>しばらく、ここでいろいろと遊んでみることにする。</p>
+<p>もし、Vercelの不具合の原因がわかったら、そちらへの再移行も考えていきたい。</p>
+<p>ダメならダメで帰ってきたらいい、くらいに、つかいこんでいきたい。</p>
+
+<ol class="breadcrumb">
+    <li><a href="http://localhost:1313/">1o0 Project</a>
+    <li><a href="http://localhost:1313/blog/">今是記</a>
+    <li>VercelからGitHubPageへの引っ越し
+</ol>

@@ -3,117 +3,117 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://1o0.jp/</loc>
+    <loc>http://localhost:1313/blog/202011/30-diary/</loc>
     <lastmod>2020-11-30T23:38:09+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/</loc>
-    <lastmod>2020-11-30T23:38:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://1o0.jp/blog/202011/30-diary/</loc>
-    <lastmod>2020-11-30T23:38:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://1o0.jp/blog/202011/29-mst_mt-aduma/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2020-11-29T00:41:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/27-bladerunner/</loc>
+    <loc>http://localhost:1313/blog/202011/29-mst_mt-aduma/</loc>
+    <lastmod>2020-11-29T00:41:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2020-11-29T00:41:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/blog/202011/27-bladerunner/</loc>
     <lastmod>2020-11-27T00:28:33+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/27-apocalypse-now/</loc>
+    <loc>http://localhost:1313/blog/202011/27-apocalypse-now/</loc>
     <lastmod>2020-11-27T00:28:05+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/26-rest-in-peace/</loc>
+    <loc>http://localhost:1313/blog/202011/26-rest-in-peace/</loc>
     <lastmod>2020-11-26T07:47:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/25-memorial-patriotism/</loc>
+    <loc>http://localhost:1313/blog/202011/25-memorial-patriotism/</loc>
     <lastmod>2020-11-25T20:02:23+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/categories/it/</loc>
+    <loc>http://localhost:1313/categories/it/</loc>
     <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/dic/unix_os/</loc>
+    <loc>http://localhost:1313/dic/unix_os/</loc>
     <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/dic/unix_shell/</loc>
+    <loc>http://localhost:1313/dic/unix_shell/</loc>
     <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/dic/</loc>
+    <loc>http://localhost:1313/dic/</loc>
     <lastmod>2020-11-18T16:58:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/18-jormungand-02/</loc>
+    <loc>http://localhost:1313/blog/202011/18-jormungand-02/</loc>
     <lastmod>2020-11-18T10:41:21+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/18-trust2write/</loc>
+    <loc>http://localhost:1313/blog/202011/18-trust2write/</loc>
     <lastmod>2020-11-18T02:46:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/17-jormungand-01/</loc>
+    <loc>http://localhost:1313/blog/202011/17-jormungand-01/</loc>
     <lastmod>2020-11-17T06:05:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</loc>
+    <loc>http://localhost:1313/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</loc>
     <lastmod>2020-11-16T03:59:51+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/www/</loc>
+    <loc>http://localhost:1313/www/</loc>
     <lastmod>2020-11-15T23:31:27+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/15-check-switch-dns/</loc>
+    <loc>http://localhost:1313/blog/202011/15-check-switch-dns/</loc>
     <lastmod>2020-11-15T08:23:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/15-k-pop-make-sekai-hot/</loc>
+    <loc>http://localhost:1313/blog/202011/15-k-pop-make-sekai-hot/</loc>
     <lastmod>2020-11-15T04:41:54+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/14-moving-vercel-github/</loc>
+    <loc>http://localhost:1313/blog/202011/14-moving-vercel-github/</loc>
     <lastmod>2020-11-14T03:38:06+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/blog/202011/14-hello-blog/</loc>
+    <loc>http://localhost:1313/blog/202011/14-hello-blog/</loc>
     <lastmod>2020-11-14T00:56:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://1o0.jp/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
   
 </urlset>

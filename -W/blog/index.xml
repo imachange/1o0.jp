@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>今是記 on 1o0 Project</title>
-    <link>http://1o0.jp/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in 今是記 on 1o0 Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Nov 2020 23:38:09 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2020 00:41:48 +0900</lastBuildDate>
     
-	<atom:link href="http://1o0.jp/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>半影月食とENHYPENデビュー</title>
-      <link>http://1o0.jp/blog/202011/30-diary/</link>
+      <link>http://localhost:1313/blog/202011/30-diary/</link>
       <pubDate>Mon, 30 Nov 2020 23:38:09 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/30-diary/</guid>
+      <guid>http://localhost:1313/blog/202011/30-diary/</guid>
       <description>半影月食 今日は満月で、半影月食なのだという。
 今年は1月と6月にあったが、その時には知らなかったので、今日は見ようと思った。
 空を見上げてみたが、肉眼ではよくわからなかった。デジタルカメラなどで撮影すると欠けた様子がわかりやすいという。
@@ -41,10 +41,10 @@
     
     <item>
       <title>【妄想トラベル】真妻山(和歌山)</title>
-      <link>http://1o0.jp/blog/202011/29-mst_mt-aduma/</link>
+      <link>http://localhost:1313/blog/202011/29-mst_mt-aduma/</link>
       <pubDate>Sun, 29 Nov 2020 00:41:48 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/29-mst_mt-aduma/</guid>
+      <guid>http://localhost:1313/blog/202011/29-mst_mt-aduma/</guid>
       <description>Go To トラベルなんてヒマもカネもないから、大阪発着・青春18切符利用・日帰りのプランを練ってみた。
 妄想するだけならカネはかからない。ヒマはつぶれる。でも、いつか行きたい。
 真妻山とは 日高登山部活動記録⑥ 真妻山（標高523.4ｍ） | CLUB HIDAKA BLOGによると、真妻山に登るルートは複数あって色々な楽しみ方ができるうえ、頂上から眺める景色が素晴らしいので、登山好きに人気の高い山であるという。
@@ -71,10 +71,10 @@
     
     <item>
       <title>【映画】「ブレードランナー　ファイナルカット」人は人造人間を裁けるか</title>
-      <link>http://1o0.jp/blog/202011/27-bladerunner/</link>
+      <link>http://localhost:1313/blog/202011/27-bladerunner/</link>
       <pubDate>Fri, 27 Nov 2020 00:28:33 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/27-bladerunner/</guid>
+      <guid>http://localhost:1313/blog/202011/27-bladerunner/</guid>
       <description>ブレードランナー　ファイナルカット
 映画館の会員になった。誕生日のある月は千円になるという。せっかくなのでリドリー・スコット監督の『ブレードランナー　ファイナルカット』を観ることにした。いわゆる無印と内容は一緒。ただ細かいところが違っている。
 21世紀初頭、人間は人間よりも知能も運動能力も優れた人造人間レプリカントを創り出して奴隷としてつかっていた。レプリカントは主に地球から遠く離れたところで使役されているが、中にはスペースシャトルを奪って地球に潜り込む者もいる。これを追いかけて殺すブレードランナーの活躍を描いている。
@@ -92,10 +92,10 @@
     
     <item>
       <title>【映画】「地獄の黙示録」40年前の地獄絵図を観た</title>
-      <link>http://1o0.jp/blog/202011/27-apocalypse-now/</link>
+      <link>http://localhost:1313/blog/202011/27-apocalypse-now/</link>
       <pubDate>Fri, 27 Nov 2020 00:28:05 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/27-apocalypse-now/</guid>
+      <guid>http://localhost:1313/blog/202011/27-apocalypse-now/</guid>
       <description>地獄の黙示録を見た。原題はアポカリプス・ナウ。もし、この時代にTwitterがあったならアポカリプス・なうと書きそう。
 実は地獄の黙示録を観るのは三度目、映画館でははじめてとなる。一度目は高校生のときで、途中から寝ていた。二度目は学生になってからでなんじゃこりゃと思っていた。映画館でやっているヨ、と知ったのは昨日で、いつまでやっているのか見たら今日までだった。だから、観に行ってきた。
 地獄の黙示録のあらすじを簡単に書いておくと、アタマのイカれたコーツ大佐を暗殺しろと命令された将校が河を遡っていく、という割とシンプルなストーリーだ。もちろん、ラスボスにも会える。当然、ぶっ倒す。ミッション・コンプリート！！ここには何のひねりもない。
@@ -108,10 +108,10 @@
     
     <item>
       <title>訃報四件に思うこと マラドーナ氏、矢口高雄さん、尾上利夫さん、川上敏行さん</title>
-      <link>http://1o0.jp/blog/202011/26-rest-in-peace/</link>
+      <link>http://localhost:1313/blog/202011/26-rest-in-peace/</link>
       <pubDate>Thu, 26 Nov 2020 07:47:03 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/26-rest-in-peace/</guid>
+      <guid>http://localhost:1313/blog/202011/26-rest-in-peace/</guid>
       <description>この24時間のうちに四件、著名人の訃報が入ってきた。
  サッカー マラドーナ氏が死去 「5人抜き」など伝説のプレー | サッカー | NHKニュース 「釣りキチ三平」 漫画家 矢口高雄さん死去 | おくやみ | NHKニュース 尾上利夫さん死去　水俣病出水の会会長82歳　救済法成立に尽力｜【西日本新聞ニュース】 川上敏行さん死去　９６歳　水俣病関西訴訟の元原告団長 ｜ 熊本日日新聞  いずれの方にも面識はない。マラドーナ氏と面識は世のサッカー少年の垂唾の的だろう。
 マラドーナ氏は（最近の水準としては）まだ若いんじゃないのか、と思うが、あとの方たちは大往生の部類に入る。
@@ -130,10 +130,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>憂国忌半世紀目</title>
-      <link>http://1o0.jp/blog/202011/25-memorial-patriotism/</link>
+      <link>http://localhost:1313/blog/202011/25-memorial-patriotism/</link>
       <pubDate>Wed, 25 Nov 2020 20:02:23 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/25-memorial-patriotism/</guid>
+      <guid>http://localhost:1313/blog/202011/25-memorial-patriotism/</guid>
       <description>朝のNHKで三島由紀夫の決起の映像が流れていた。
 三島と最後まで行動を共にしてしまった森田必勝の兄が思いを口にしていた。
 曰く、親に先立たれ16歳年下の必勝の親代わりをしていた、大学に行かせるため東京に送り出した弟が大学紛争のために勉学の自由が奪われていると憤っていた、自分は教員の組合活動をしていて右翼に傾倒していく弟とは立場も違ったが国を思う気持ちは同じだったのではないか、云々。
@@ -167,10 +167,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>ヨルムンガンド02話　意外と少年兵は笑う</title>
-      <link>http://1o0.jp/blog/202011/18-jormungand-02/</link>
+      <link>http://localhost:1313/blog/202011/18-jormungand-02/</link>
       <pubDate>Wed, 18 Nov 2020 10:41:21 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/18-jormungand-02/</guid>
+      <guid>http://localhost:1313/blog/202011/18-jormungand-02/</guid>
       <description>武器商人ココ・ヘクマティアルとその私兵たちの暗躍を描く2012年のアニメ「ヨルムンガンド」を見ている。
 ストーリー 前回は、納入までをめぐる話だったが、今回の一行は納入したあとでもトラブルに巻き込まれてしまう。
 しようと思いさえすればできそうな強行突破をせずに、どう情況を切り抜けていくか、というのが今回の見せ場であったと思った。
@@ -193,10 +193,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>小峰さんの哲学実践ツイートに思ったこと</title>
-      <link>http://1o0.jp/blog/202011/18-trust2write/</link>
+      <link>http://localhost:1313/blog/202011/18-trust2write/</link>
       <pubDate>Wed, 18 Nov 2020 02:46:46 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/18-trust2write/</guid>
+      <guid>http://localhost:1313/blog/202011/18-trust2write/</guid>
       <description>Twitterでの小峰ひずみさんのTweetを読んで思ったこと。
 はじめに 小峰さんが、京都大学「ニセNF」で何か話す、ワークショップをあげるというので、こういうツイートをしていた。
 識字教育は部落の生活向上と直結していた。では、誰もが読み書きが可能である現代における「識字教育」はいったい何にあたるのか？(識字教育は日本語教育とは異なります)。それが今回の発表の裏テーマです。みなさんにご意見を募りたいと思います。
@@ -242,10 +242,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>ヨルムンガンド01話　「武器商人と旅をした」</title>
-      <link>http://1o0.jp/blog/202011/17-jormungand-01/</link>
+      <link>http://localhost:1313/blog/202011/17-jormungand-01/</link>
       <pubDate>Tue, 17 Nov 2020 06:05:34 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/17-jormungand-01/</guid>
+      <guid>http://localhost:1313/blog/202011/17-jormungand-01/</guid>
       <description>遍路しているとき、ブックオフで立ち読みして知った高橋慶太郎のガンアクション漫画『ヨルムンガンド』がアニメ化されていることを知った。見てみようかと思っていたら、その機会が得られたので、感想。
 ストーリー 第一話では、少年兵ヨナが武器商人ココ・ヘクマティアルの部隊の一員として迎え入れられるまでが描かれる。
 コンテナ奪還 東欧の小国に足止めされているココたちは、税関に押さえられたコンテナを奪還するために、港へと向かう。
@@ -262,10 +262,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>アウシュヴィッツを知らない大学生の『アンネの日記』の読み方のメモ</title>
-      <link>http://1o0.jp/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</link>
+      <link>http://localhost:1313/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</link>
       <pubDate>Mon, 16 Nov 2020 03:59:51 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</guid>
+      <guid>http://localhost:1313/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/</guid>
       <description>悶問(仮)のためのメモ書き。
 今年はじめ、とある呑み会で「最近の大学生はアウシュヴィッツも知らないらしい」という話題が挙がった。大学生がアウシュヴィッツを知らない！真偽は知らない。この手の嘆きのバリエーションは実に豊かだ。いくつか例を挙げてみよう。
  大学生の10人のうち2人は小学生の算数ができません1。 東京大学の院生にバフチンのポリフォニー論を講じていたら「ドストエフスキーって誰なんですか？」と聞かれた2。 表象のクラスでロラン・バルトを知っていたのは10人に３人くらいだった3 英文学の学生から「『失楽園』はおとうさんが読むエッチな本だと思っていた」という声が返ってきた4。 漱石を全く読んだことのない京大生がいる5。 聖心女子大学で41人の学生に「新聞を取っている人は」と問えばたったの4人。「かつて日本はアメリカと戦争したことがある、知っている人は」と問えば約半分の21人が知らない6。 戦後70年を大学生の約4割が「知らない」7。 イラクの位置がわからない大学生が44％もいる！8 大学生の半数がベトナムの位置もわからない！9 現在、日本では「『%』が分からない大学生」が増えている。10  実に惨憺たる有様ではないか。アウシュヴィッツくらい知らなくても不思議ではない。
@@ -292,10 +292,10 @@ Ole OLe OLe Ole we are the champ,we are the champions
     
     <item>
       <title>DNSの切り替え待ちで確認すること</title>
-      <link>http://1o0.jp/blog/202011/15-check-switch-dns/</link>
+      <link>http://localhost:1313/blog/202011/15-check-switch-dns/</link>
       <pubDate>Sun, 15 Nov 2020 08:23:22 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/15-check-switch-dns/</guid>
+      <guid>http://localhost:1313/blog/202011/15-check-switch-dns/</guid>
       <description>切り替えにかかる時間がちょっと長いな、とおもったときに、確認しておいても良いな、と思ったのでメモ。
 はじめに 昔はサーバーの切り替えをすると、DNSが浸透するまでに最大72時間くらいかかるから気長に待ちましょう、といわれていた。
 ドメインを新しくつくったり、ドメインを別のサーバーに移し替える作業を行うと、ドメインをIPアドレスに変換してくれるDNSサーバーの情報が更新されるのを待たなければならない。
@@ -316,10 +316,10 @@ Cloudflareの設定を変えても良かったが、CDNをつかわなくても�
     
     <item>
       <title>アイドル沼にハマった風景</title>
-      <link>http://1o0.jp/blog/202011/15-k-pop-make-sekai-hot/</link>
+      <link>http://localhost:1313/blog/202011/15-k-pop-make-sekai-hot/</link>
       <pubDate>Sun, 15 Nov 2020 04:41:54 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/15-k-pop-make-sekai-hot/</guid>
+      <guid>http://localhost:1313/blog/202011/15-k-pop-make-sekai-hot/</guid>
       <description>11月8日(日)に悶問(仮)で話した内容を掲載します。だいたい、こんなことを話したんだよ、という記録として。
 はじめに オタク女子は、浪費する。
  あるK-POPアイドルのファンは、ライブに行くための旅費として、1年間で130万円使った。別の人は、無名の若手俳優に恋をして、マフラーやコートなど2年間で30万円分のプレゼントを贈った。好きなアニメの同人誌を買いあさるため、家族から借金をした強者もいる。通帳の残高が減り続けても、悲しみはない。愛するものにお金を使える幸福感があるから。1
@@ -349,10 +349,10 @@ BTSのステージに行ったらこんなすごいパフォーマンスが観�
     
     <item>
       <title>VercelからGitHubPageへの引っ越し</title>
-      <link>http://1o0.jp/blog/202011/14-moving-vercel-github/</link>
+      <link>http://localhost:1313/blog/202011/14-moving-vercel-github/</link>
       <pubDate>Sat, 14 Nov 2020 03:38:06 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/14-moving-vercel-github/</guid>
+      <guid>http://localhost:1313/blog/202011/14-moving-vercel-github/</guid>
       <description>リニューアル前にはVercelをつかってホストしていたが、なぜかつかえなくなった。
 理由がわからないので、Github Pagesに移行することにした。
 これまでの構成 ブログをつくりなおす旨、前回のブログでは宣言した。
@@ -371,10 +371,10 @@ $ git add + $ git commit + $ git pushする。</description>
     
     <item>
       <title>ブログ書き始め</title>
-      <link>http://1o0.jp/blog/202011/14-hello-blog/</link>
+      <link>http://localhost:1313/blog/202011/14-hello-blog/</link>
       <pubDate>Sat, 14 Nov 2020 00:56:46 +0900</pubDate>
       
-      <guid>http://1o0.jp/blog/202011/14-hello-blog/</guid>
+      <guid>http://localhost:1313/blog/202011/14-hello-blog/</guid>
       <description>また、ひとつ、齢をとった。
 これを機にブログをはじめる。はじめるというより、つくりなおす、といった方が良いのだろうか。
 性懲りもなく。性懲りのないついでに、雑感を述べておきたい。
