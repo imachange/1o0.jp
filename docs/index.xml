@@ -6,10 +6,118 @@
     <description>Recent content on 1o0 Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Nov 2020 23:38:09 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2020 23:55:25 +0900</lastBuildDate>
     
 	<atom:link href="http://1o0.jp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>12月02日の日記 身内のCOVID-19感染疑惑とENHYPEN国内地上波初ステージ</title>
+      <link>http://1o0.jp/blog/202012/02-diary/</link>
+      <pubDate>Wed, 02 Dec 2020 23:55:25 +0900</pubDate>
+      
+      <guid>http://1o0.jp/blog/202012/02-diary/</guid>
+      <description>休日。家でゴロゴロしていた。
+Hugoのテーマ改修と基本情報技術者試験の勉強をしていた。
+COVID-19 義父と義妹がCOVID-19の感染者と濃厚接触したとかでしばらく自主隔離するという。
+明日、PCR検査だとか。
+いよいよ近づいてきている感じがある。
+今日の大阪の新規感染者数は&amp;hellip;。
+ 新型コロナ: 大阪府、2日の新規感染427人　過去3番目の多さ: 日本経済新聞 大阪府　新型コロナ関連情報 - Yahoo! JAPAN  FNS歌謡祭 うちにはテレビがないけど、地上波でENHYPENが歌ったらしくTwitterが賑わっていた。
+BTSも出ていたようだ。
+FNS関係ないけど、このコラージュは秀逸。
+Seventeenを買うのに抵抗のあるエンジンへ。
+巻頭特集
+Z世代のENHYPENに聞く
+孫が喜ぶプレゼントはこれだ！ pic.twitter.com/bdaKnN123y
+&amp;mdash; フニ (@enhypen_funi) December 1, 2020  </description>
+    </item>
+    
+    <item>
+      <title>CSSだけでHugoのコードブロックにファイル名を表示させる</title>
+      <link>http://1o0.jp/blog/202012/02-codeblock-name/</link>
+      <pubDate>Wed, 02 Dec 2020 06:15:25 +0900</pubDate>
+      
+      <guid>http://1o0.jp/blog/202012/02-codeblock-name/</guid>
+      <description>前提  Hugo Static Site Generator v0.74.3  Hugoでのコードブロック&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;〜&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;の取り扱い Markdown記法では｀｀｀(上)と｀｀｀(下)で挟み込んだところの記述がコードブロックとして認識される1。
+Hugoでは｀｀｀html(上)と記述すると「これはhtmlの記述なのだ」とHugoが認識して自動的にハイライトしてくれる。
+｀｀｀ &amp;lt;p&amp;gt;ハイライトされない。&amp;lt;/p&amp;gt; ｀｀｀ ｀｀｀html &amp;lt;p&amp;gt;ハイライトされる。&amp;lt;/p&amp;gt; ｀｀｀ こういう記述は、このように出力される。
+ &amp;lt;p&amp;gt;ハイライトされない。&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;ハイライトされる。&amp;lt;/p&amp;gt; 実現したいこととその手段 Qiitaでは｀｀｀html:sample.htmlと表記すると、コードブロックにsample.htmlと表示される。
+&amp;lt;p&amp;gt;ハイライトされて、しかも、タイトルも表示される。&amp;lt;/p&amp;gt; Hugoではデフォルトではそのような機能はついていないので、何かしらの手段を用いて実装しなければならない。
+みな、同じようなことを考えるようで、おおまかに分けて、２つの方法が紹介されている。
+Javascriptで実装  GitHub Pagesでコードブロックにファイル名を表示する コードブロックにファイル名を指定する (若月駿)  Javascriptはあまり使いたくなかったので、テーマ側で素のhtmlとして出力できないかと考えた。
+テーマ側で実装  【Hugo】コードブロック内にファイル名を表示する | みどりみちのブログ コードブロックにファイル名を指定する (plugin) (若月駿) Jekyllの場合  みどりみちさんの手法は、とても魅力的だったが、どうもうまく表示されない。
+たぶん、単純な間違えがあるんだろうとは思うけど、それがわかるほどの知識が今、ない。
+そのうち、リトライしたい。
+CSSだけで実装 出力されているソースコードを見ると、こうなっている。
+&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt; &amp;lt;pre style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&amp;gt; &amp;lt;code class=&amp;#34;language-html:sample.html&amp;#34; data-lang=&amp;#34;html:sample.html&amp;#34;&amp;gt; &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;ハイライトされて、しかも、タイトルも表示される。&amp;amp;lt;/&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt; &amp;lt;/code&amp;gt; &amp;lt;/pre&amp;gt; &amp;lt;/div&amp;gt; CSSのcontentプロパティでdata-langを表示させればいいのではないか。
+読み込んでいるCSS or Style要素に以下のコードを追加してみた。
+pre &amp;gt; code[data-lang]:before{ content: attr(data-lang)&amp;#34;\A&amp;#34;; white-space: pre; } これでpre直下のcodeで、data-lang属性をもっている場合のみ、html:sample.</description>
+    </item>
+    
+    <item>
+      <title>アレシボ天文台の崩壊</title>
+      <link>http://1o0.jp/blog/202012/02-arecibo-observatory/</link>
+      <pubDate>Wed, 02 Dec 2020 06:15:25 +0900</pubDate>
+      
+      <guid>http://1o0.jp/blog/202012/02-arecibo-observatory/</guid>
+      <description>アレシボ天文台が崩壊したという。
+SETI@home(分散クラウドコンピューティングのハシリ)がこの５月末に無期中断(事実上の終了)したのは施設の老朽化が原因だと伝えられていた。
+解体が決まってはいたけど、崩壊が先に来たという。
+なんてこった。
+ 巨大電波望遠鏡が崩壊　プエルトリコのアレシボ天文台：時事ドットコム アレシボ天文台の900トン超の受信機が落下して主鏡を粉砕 - GIGAZINE  SETI@homeにはけっこう中断時期があったけど、今世紀はじめから参加していた。
+宇宙から飛来してくる膨大な電波の中から、宇宙人がいるのであれば発しているであろう電波を選り出していくために必要な計算リソースを、一台のコンピューターではなくて、インターネットに接続された大量のコンピューターに振り分ける仕組みの一番大きな取り組みがSETI@homeだった。
+ 宇宙人を探していた分散プロジェクト、SETI@homeが終了へ。分散コンピューティングは新型コロナの解析など現在進行系で活躍中 | ハーバー・ビジネス・オンライン 「SETI@Home」の挑戦は終われど、宇宙人の探索はこれからも続く | WIRED.jp  計算機の(余剰な)リソースは、人類共通の利益のためにつかおう、という高邁な理想は今もなお有効だ。
+BOINCには今、多くのプロジェクトが登録されている。
+うちのパソコンでもタンパク質の解析をいくらか分担している。
+アレシボ天文台のひとつの時代が終わりを象徴している。もはや次の時代に移行した。良くも、悪くも。
+身近な参加　ー　科学でも、政治でも、それが身近に感じられるということの大切さが今後、いよいよ大切なものとなっていくのだろう。</description>
+    </item>
+    
+    <item>
+      <title>GitHubPagesが404になったときの対処</title>
+      <link>http://1o0.jp/blog/202012/02-check-404-github-pages/</link>
+      <pubDate>Wed, 02 Dec 2020 05:50:42 +0900</pubDate>
+      
+      <guid>http://1o0.jp/blog/202012/02-check-404-github-pages/</guid>
+      <description>昨日の日記でHugoのテーマを改修したところ、GitHub Pagesで404エラーが表示されるようになった、と書いた。
+原因がわかったので、今後の対策とともにメモしておく。
+要約  GitHub Pagesを利用する際は、CNAMEファイルに気をつけよう。 Hugoを利用するときには、staticフォルダにCNAMEファイルを入れておこう。  前提  Hugo Static Site Generator v0.74.3  背景 $ hugoコマンドを実行すると、WEBサイトが生成されるが、次の問題がある。
+ 下書き(draftがtrueになっている)ファイルでもページを生成してしまう。 生成したページは元の記事(contentフォルダ内)を削除したり、ディレクトリ構造を変更しても残り続ける。  だから、$ hugoを実行する前にはゴミとなるファイルをキレイにしておくほうがいい。
+今回はゴミとなるファイルがたまってきたので一掃したところ、GitHub Pagesで404エラーが出ることになった。
+手順 Hugoのエラーではないことは、ローカルでは意図したとおりに表示されることから、明らかだった。
+Hugoのエラーならその場で気づく。
+GitHub Pagesの側のエラーであるということがわかった。
+ GitHub Pagesで「404エラー」時に確認すべき7つのこと - Qiita GitHub Pagesの作り方（404が出てしまい挫折した人向け） - Qiita   index.htmlを配置しているか プッシュしてから5分以上経っているか index.htmlを再コミットして再プッシュしたか アクセスしているURLは間違えていないか ソースリポジトリは1GBを超えていないか 月当たり100GBのソフトな帯域幅制限を超えていないか 時間当たり10ビルドのソフトな制限を超えていないか  うん。
+すべてクリアしているのに、なぜか、表示されない。
+ビルドもきちんと成功している。
+その証拠に https://{ユーザー名}.github.io/{リポジトリ名}/にアクセスしたら、表示される。
+ネームサーバーの問題かとも思ったが、そうでもないようだ。
+ここまで来て、CNAMEファイルがないことに気づいた。
+公式のページでは、CNAMEファイルにドメインだけ入れろ、と書いてある。
+今まで意識していなかったが、公開用のディレクトリを一掃するときに一緒に消してしまっていた。
+CNAMEファイルをつくり、1o0.jpとだけ入力して保存し、プッシュすると無事にアクセスできるようになった。
+対策 CNAMEファイルはstaticフォルダに入れておくことにした。
+そうすれば$ hugoのたびに公開用のフォルダにコピーされる。
+けっこう焦ったが、今後、アクセスできない時には、原因が同じなら次の二点を押さえたら良いという教訓を得た。
+ https://{ユーザー名}.github.io/{リポジトリ名}/で表示されているか。 CNAMEファイルの有無。  </description>
+    </item>
+    
+    <item>
+      <title>12月01日の日記　暦の上ではディセンバー</title>
+      <link>http://1o0.jp/blog/202012/01-diary/</link>
+      <pubDate>Tue, 01 Dec 2020 06:14:10 +0900</pubDate>
+      
+      <guid>http://1o0.jp/blog/202012/01-diary/</guid>
+      <description>ENHYPENのデビュー曲のPVENHYPEN (엔하이픈) &amp;lsquo;Given-Taken&amp;rsquo; Official MV - YouTubeとI-LANDの映像を見ながら寝落ちしていた。
+最近、夕飯を食べたら、そのまま横になって寝てしまう。豚になる生活。
+それはそうと今日から暦の上ではディセンバー（これが書きたかった）。
+ハートもサバイバー。
+朝活  基本情報技術者試験の勉強　⇒　身が入らず。 Hugoテーマの改修  このウェブサイト(1o0.jp以下の各ページ)につかっているテーマはとてもシンプルで２つのファイルしかつかっていない。
+&amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; {{ .Content }} &amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; {{ .Content }} &amp;lt;ul&amp;gt; {{ range .Data.Pages }} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;{{ .RelPermalink }}&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt; ({{ .Date.Format &amp;#34;2006-01-02&amp;#34; }}) {{ end }} &amp;lt;/ul&amp;gt; ほんとうに、これだけの記述で、ブログとして機能する。
+ただ、今後の拡張を考え、baseofでブロックとして読み込ませるようにした。
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; {{- partial &amp;#34;head.html&amp;#34; . -}} &amp;lt;body&amp;gt; {{- partial &amp;#34;header.html&amp;#34; . -}} &amp;lt;div id=&amp;#34;content&amp;#34;&amp;gt; {{- block &amp;#34;main&amp;#34; .</description>
+    </item>
     
     <item>
       <title>半影月食とENHYPENデビュー</title>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html><title>CSSだけでHugoのコードブロックにファイル名を表示させる</title>
+<style>
+        body{
+            color:#dbdbdb;
+            background-color: #464646
+            }
+        a{
+            color: aquamarine;}
+        a:visited{
+            color: #bdbd}
+        code{
+            color:#f8f8f2;
+            background-color:#272822;}
+        pre {
+            background-color:#272822;
+            -moz-tab-size:4;
+            -o-tab-size:4;
+            tab-size:4}
+        pre > code[data-lang]:before{
+            content: attr(data-lang)"\A";
+            white-space: pre;
+    </style>
+    <body><div id="content">
+<h1>CSSだけでHugoのコードブロックにファイル名を表示させる</h1>
+<h2 id="前提">前提</h2>
+<ul>
+<li>Hugo Static Site Generator v0.74.3</li>
+</ul>
+<h2 id="hugoでのコードブロックprecodecodepreの取り扱い">Hugoでの<strong>コードブロック</strong><code>&lt;pre&gt;&lt;code&gt;〜&lt;/code&gt;&lt;/pre&gt;</code>の取り扱い</h2>
+<p>Markdown記法では<code>｀｀｀</code>(上)と<code>｀｀｀</code>(下)で挟み込んだところの記述がコードブロックとして認識される<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p>Hugoでは<code>｀｀｀html</code>(上)と記述すると「これはhtmlの記述なのだ」とHugoが認識して自動的にハイライトしてくれる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
+｀｀｀
+
+&lt;<span style="color:#f92672">p</span>&gt;ハイライトされない。&lt;/<span style="color:#f92672">p</span>&gt;
+
+｀｀｀
+
+｀｀｀html
+
+&lt;<span style="color:#f92672">p</span>&gt;ハイライトされる。&lt;/<span style="color:#f92672">p</span>&gt;
+
+｀｀｀
+
+</code></pre></div><p>こういう記述は、このように出力される。</p>
+<pre><code>
+&lt;p&gt;ハイライトされない。&lt;/p&gt;
+
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#f92672">p</span>&gt;ハイライトされる。&lt;/<span style="color:#f92672">p</span>&gt;
+
+</code></pre></div><h2 id="実現したいこととその手段">実現したいこととその手段</h2>
+<p><a href="https://qiita.com/">Qiita</a>では<code>｀｀｀html:sample.html</code>と表記すると、コードブロックに<samp>sample.html</samp>と表示される。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:sample.html" data-lang="html:sample.html">
+&lt;<span style="color:#f92672">p</span>&gt;ハイライトされて、しかも、タイトルも表示される。&lt;/<span style="color:#f92672">p</span>&gt;
+
+</code></pre></div><p>Hugoではデフォルトではそのような機能はついていないので、何かしらの手段を用いて実装しなければならない。</p>
+<p>みな、同じようなことを考えるようで、おおまかに分けて、２つの方法が紹介されている。</p>
+<h3 id="javascriptで実装">Javascriptで実装</h3>
+<ul>
+<li><a href="https://hachy.github.io/2018/11/14/add-file-name-to-code-block-in-jekyll-on-github-pages.html">GitHub Pagesでコードブロックにファイル名を表示する</a></li>
+<li><a href="https://shwaka.github.io/2019/07/12/named-codeblock.html">コードブロックにファイル名を指定する (若月駿)</a></li>
+</ul>
+<p>Javascriptはあまり使いたくなかったので、テーマ側で素のhtmlとして出力できないかと考えた。</p>
+<h3 id="テーマ側で実装">テーマ側で実装</h3>
+<ul>
+<li><a href="https://midorimici.com/posts/hugo-code-name/">【Hugo】コードブロック内にファイル名を表示する | みどりみちのブログ</a></li>
+<li><a href="https://shwaka.github.io/2019/07/25/named-codeblock-plugin.html">コードブロックにファイル名を指定する (plugin) (若月駿)</a> Jekyllの場合</li>
+</ul>
+<p>みどりみちさんの手法は、とても魅力的だったが、どうもうまく表示されない。</p>
+<p>たぶん、単純な間違えがあるんだろうとは思うけど、それがわかるほどの知識が今、ない。</p>
+<p>そのうち、リトライしたい。</p>
+<h2 id="cssだけで実装">CSSだけで実装</h2>
+<p>出力されているソースコードを見ると、こうなっている。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;highlight&#34;</span>&gt;
+    &lt;<span style="color:#f92672">pre</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;
+        &lt;<span style="color:#f92672">code</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;language-html:sample.html&#34;</span> <span style="color:#a6e22e">data-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;html:sample.html&#34;</span>&gt;
+            &amp;lt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;p&lt;/<span style="color:#f92672">span</span>&gt;&amp;gt;ハイライトされて、しかも、タイトルも表示される。&amp;lt;/&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;p&lt;/<span style="color:#f92672">span</span>&gt;&amp;gt;
+        &lt;/<span style="color:#f92672">code</span>&gt;
+    &lt;/<span style="color:#f92672">pre</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+</code></pre></div><p>CSSのcontentプロパティで<code>data-lang</code>を表示させればいいのではないか。</p>
+<p>読み込んでいるCSS or Style要素に以下のコードを追加してみた。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+<span style="color:#f92672">pre</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">code</span><span style="color:#f92672">[</span><span style="color:#f92672">data-lang</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">before</span>{
+<span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>lang)<span style="color:#e6db74">&#34;\A&#34;</span>;
+<span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">pre</span>;
+}
+
+</code></pre></div><p>これで<code>pre</code>直下の<code>code</code>で、<code>data-lang</code>属性をもっている場合のみ、<samp>html:sample.html</samp>と表示される。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>この方法の欠点としては以下のものが考えられる。</p>
+<ul>
+<li>Hugoの仕様に依存している。</li>
+<li><samp>html:sample.html</samp>は不格好？</li>
+<li><samp>html:sample.html</samp>はコピーできない。</li>
+</ul>
+<p>Hugoの仕様については変更があれば対応できる。</p>
+<p>種類とファイル名がわかるようにしたいと思っていたので、<samp>html:sample.html</samp>という表示は不格好ではあるかも知れないが、許容範囲だ。</p>
+<p>ファイル名をコピーするという需要はどれほどあるのだろうか。ファイル名を確かめることはあっても、それをコピー＆ペーストした体験はないので、問題ない。</p>
+<p>メリットとしては、とてもシンプルだ、ということに尽きる。</p>
+<p>たぶん、Hugoに限らず、移植できる可能性がある。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>エスケープする方法がわからなかったので<code>｀｀｀</code>は全角で記述している。ほんとうは半角。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+<hr>
+<ol class="nav navbar-nav"><li><a href="http://1o0.jp/">1o0 Project</a></li>
+    <li><a href="http://1o0.jp/blog/">今是記</a></li>
+    <li class="active" ><a href="http://1o0.jp/blog/202012/02-codeblock-name/">CSSだけでHugoのコードブロックにファイル名を表示させる</a></li>
+    </ol>
+
+        </div></body>
+</html>

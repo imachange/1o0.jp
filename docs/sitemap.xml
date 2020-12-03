@@ -3,13 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://1o0.jp/blog/202012/02-diary/</loc>
+    <lastmod>2020-12-02T23:55:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://1o0.jp/</loc>
-    <lastmod>2020-11-30T23:38:09+09:00</lastmod>
+    <lastmod>2020-12-02T23:55:25+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://1o0.jp/blog/</loc>
-    <lastmod>2020-11-30T23:38:09+09:00</lastmod>
+    <lastmod>2020-12-02T23:55:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/202012/02-codeblock-name/</loc>
+    <lastmod>2020-12-02T06:15:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/202012/02-arecibo-observatory/</loc>
+    <lastmod>2020-12-02T06:15:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/202012/02-check-404-github-pages/</loc>
+    <lastmod>2020-12-02T05:50:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://1o0.jp/blog/202012/01-diary/</loc>
+    <lastmod>2020-12-01T06:14:10+09:00</lastmod>
   </url>
   
   <url>

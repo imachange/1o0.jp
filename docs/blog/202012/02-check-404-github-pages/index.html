@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><title>GitHubPagesが404になったときの対処</title>
+<style>
+        body{
+            color:#dbdbdb;
+            background-color: #464646
+            }
+        a{
+            color: aquamarine;}
+        a:visited{
+            color: #bdbd}
+        code{
+            color:#f8f8f2;
+            background-color:#272822;}
+        pre {
+            background-color:#272822;
+            -moz-tab-size:4;
+            -o-tab-size:4;
+            tab-size:4}
+        pre > code[data-lang]:before{
+            content: attr(data-lang)"\A";
+            white-space: pre;
+    </style>
+    <body><div id="content">
+<h1>GitHubPagesが404になったときの対処</h1>
+<p><a href="../01-diary/">昨日の日記</a>でHugoのテーマを改修したところ、GitHub Pagesで404エラーが表示されるようになった、と書いた。</p>
+<p>原因がわかったので、今後の対策とともにメモしておく。</p>
+<!-- more -->
+<h2 id="tldr">要約</h2>
+<ul>
+<li>GitHub Pagesを利用する際は、CNAMEファイルに気をつけよう。</li>
+<li>Hugoを利用するときには、staticフォルダにCNAMEファイルを入れておこう。</li>
+</ul>
+<h2 id="前提">前提</h2>
+<ul>
+<li>Hugo Static Site Generator v0.74.3</li>
+</ul>
+<h2 id="背景">背景</h2>
+<p><code>$ hugo</code>コマンドを実行すると、WEBサイトが生成されるが、次の問題がある。</p>
+<ul>
+<li>下書き(draftがtrueになっている)ファイルでもページを生成してしまう。</li>
+<li>生成したページは元の記事(contentフォルダ内)を削除したり、ディレクトリ構造を変更しても残り続ける。</li>
+</ul>
+<p>だから、<code>$ hugo</code>を実行する前にはゴミとなるファイルをキレイにしておくほうがいい。</p>
+<p>今回はゴミとなるファイルがたまってきたので一掃したところ、GitHub Pagesで404エラーが出ることになった。</p>
+<h2 id="手順">手順</h2>
+<p>Hugoのエラーではないことは、ローカルでは意図したとおりに表示されることから、明らかだった。</p>
+<p>Hugoのエラーならその場で気づく。</p>
+<p>GitHub Pagesの側のエラーであるということがわかった。</p>
+<ul>
+<li><a href="https://qiita.com/yuuta_s/items/6b05c2173a48e13a1373">GitHub Pagesで「404エラー」時に確認すべき7つのこと - Qiita</a></li>
+<li><a href="https://qiita.com/KOJI-YAMAMOTO/items/38578a3f4c822a15ef49">GitHub Pagesの作り方（404が出てしまい挫折した人向け） - Qiita</a></li>
+</ul>
+<ol>
+<li>index.htmlを配置しているか</li>
+<li>プッシュしてから5分以上経っているか</li>
+<li>index.htmlを再コミットして再プッシュしたか</li>
+<li>アクセスしているURLは間違えていないか</li>
+<li>ソースリポジトリは1GBを超えていないか</li>
+<li>月当たり100GBのソフトな帯域幅制限を超えていないか</li>
+<li>時間当たり10ビルドのソフトな制限を超えていないか</li>
+</ol>
+<p>うん。</p>
+<p>すべてクリアしているのに、なぜか、表示されない。</p>
+<p>ビルドもきちんと成功している。</p>
+<p>その証拠に https://{ユーザー名}.github.io/{リポジトリ名}/にアクセスしたら、表示される。</p>
+<p>ネームサーバーの問題かとも思ったが、そうでもないようだ。</p>
+<p>ここまで来て、CNAMEファイルがないことに気づいた。</p>
+<p>公式のページでは、CNAMEファイルにドメインだけ入れろ、と書いてある。</p>
+<p>今まで意識していなかったが、公開用のディレクトリを一掃するときに一緒に消してしまっていた。</p>
+<p>CNAMEファイルをつくり、<code>1o0.jp</code>とだけ入力して保存し、プッシュすると無事にアクセスできるようになった。</p>
+<h2 id="対策">対策</h2>
+<p>CNAMEファイルはstaticフォルダに入れておくことにした。</p>
+<p>そうすれば<code>$ hugo</code>のたびに公開用のフォルダにコピーされる。</p>
+<p>けっこう焦ったが、今後、アクセスできない時には、原因が同じなら次の二点を押さえたら良いという教訓を得た。</p>
+<ul>
+<li>https://{ユーザー名}.github.io/{リポジトリ名}/で表示されているか。</li>
+<li>CNAMEファイルの有無。</li>
+</ul>
+
+<hr>
+<ol class="nav navbar-nav"><li><a href="http://1o0.jp/">1o0 Project</a></li>
+    <li><a href="http://1o0.jp/blog/">今是記</a></li>
+    <li class="active" ><a href="http://1o0.jp/blog/202012/02-check-404-github-pages/">GitHubPagesが404になったときの対処</a></li>
+    </ol>
+
+        </div></body>
+</html>

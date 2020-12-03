@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><title>12月01日の日記　暦の上ではディセンバー</title>
+<style>
+        body{
+            color:#dbdbdb;
+            background-color: #464646
+            }
+        a{
+            color: aquamarine;}
+        a:visited{
+            color: #bdbd}
+        code{
+            color:#f8f8f2;
+            background-color:#272822;}
+        pre {
+            background-color:#272822;
+            -moz-tab-size:4;
+            -o-tab-size:4;
+            tab-size:4}
+        pre > code[data-lang]:before{
+            content: attr(data-lang)"\A";
+            white-space: pre;
+    </style>
+    <body><div id="content">
+<h1>12月01日の日記　暦の上ではディセンバー</h1>
+<p>ENHYPENのデビュー曲のPV<a href="https://www.youtube.com/watch?v=nQ6wLuYvGd4">ENHYPEN (엔하이픈) &lsquo;Given-Taken&rsquo; Official MV - YouTube</a>とI-LANDの映像を見ながら寝落ちしていた。</p>
+<p>最近、夕飯を食べたら、そのまま横になって寝てしまう。豚になる生活。</p>
+<p>それはそうと今日から暦の上ではディセンバー（これが書きたかった）。</p>
+<p>ハートもサバイバー。</p>
+<h2 id="朝活">朝活</h2>
+<ul>
+<li>基本情報技術者試験の勉強　⇒　身が入らず。</li>
+<li>Hugoテーマの改修</li>
+</ul>
+<p>このウェブサイト(1o0.jp以下の各ページ)につかっているテーマはとてもシンプルで２つのファイルしかつかっていない。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:single.html" data-lang="html:single.html">
+&lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+{{ .Content }}
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:list.html" data-lang="html:list.html">
+&lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+{{ .Content }}
+&lt;<span style="color:#f92672">ul</span>&gt;
+    {{ range .Data.Pages }}
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt; ({{ .Date.Format &#34;2006-01-02&#34; }})
+        {{ end }}
+&lt;/<span style="color:#f92672">ul</span>&gt;
+
+</code></pre></div><p>ほんとうに、これだけの記述で、ブログとして機能する。</p>
+<p>ただ、今後の拡張を考え、baseofでブロックとして読み込ませるようにした。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:baseof.html" data-lang="html:baseof.html">
+<span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    {{- partial &#34;head.html&#34; . -}}
+    &lt;<span style="color:#f92672">body</span>&gt;
+        {{- partial &#34;header.html&#34; . -}}
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
+        {{- block &#34;main&#34; . }}{{- end }}
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        {{- partial &#34;footer.html&#34; . -}}
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:single.html" data-lang="html:single.html">
+{{ define &#34;main&#34; }}
+&lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+{{ .Content }}
+&lt;<span style="color:#f92672">hr</span>&gt;
+{{ partial &#34;breadcrumb.html&#34; . }}
+{{ end }}
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:list.html" data-lang="html:list.html">
+{{ define &#34;main&#34; }}
+&lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+{{ .Content }}
+&lt;<span style="color:#f92672">ul</span>&gt;
+    {{ range .Data.Pages }}
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt; ({{ .Date.Format &#34;2006-01-02&#34; }})
+        {{ end }}
+&lt;/<span style="color:#f92672">ul</span>&gt;
+{{ end }}
+
+</code></pre></div><p>ここまでの変更を反映させる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+$ hugo
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;うんぬん&#34;</span>
+$ git push
+
+</code></pre></div><p>なぜか、GitHub Pagesで404 Notfoundとなった。</p>
+<p>わけがわからない。</p>
+<p>とりあえず、原因解明はそのうちしよう。</p>
+<p>誰も見るわけではないし。</p>
+<p>⇒<a href="../02-check-404-github-pages/">GitHubPagesが404になったときの対処</a></p>
+<h2 id="仕事">仕事</h2>
+<p>線路に人が立ち入ったとかで、結局、15分遅れで職場に着いた。</p>
+<p>そういえば昨日、泣きそうな顔をした男の人に道を聞かれたっけ。</p>
+<p>「仕事の面接だけど、ケータイを置いてきてしまって、迷ってしまった。地図だけコンビニで印刷してもらって、ここに行きたいのだけど、今はどのあたりなのか」</p>
+<p>けっこう遠い。目印になりそうなところまでの道を教えた。</p>
+<p>無事にたどりつけただろうか。</p>
+<p>スギタさんが今日付けで上のグループホームに入居となった。</p>
+<p>キヨタさんは「何も聞かされていない。新入りには何も教えてくれないのか」と憤っていた。</p>
+<p>こういうことはみんなでわいわいしゃべることでもなく、組織だった申し送りという機構をもたないので「誰が、いつ、どうなるのか」という事項の伝達は漏れがちになる。</p>
+
+<hr>
+<ol class="nav navbar-nav"><li><a href="http://1o0.jp/">1o0 Project</a></li>
+    <li><a href="http://1o0.jp/blog/">今是記</a></li>
+    <li class="active" ><a href="http://1o0.jp/blog/202012/01-diary/">12月01日の日記　暦の上ではディセンバー</a></li>
+    </ol>
+
+        </div></body>
+</html>

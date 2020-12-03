@@ -43,6 +43,10 @@ slogan: "いわゆるリンク集"
 [不登校児・家族支援seizei | Facebook](https://www.facebook.com/%E4%B8%8D%E7%99%BB%E6%A0%A1%E5%85%90%E5%AE%B6%E6%97%8F%E6%94%AF%E6%8F%B4seizei-838887619550284/)
 :   みほやんが主宰している不登校当事者への支援グループのFacebookページ。
 
+[えび旅](http://ebitabi.xyz/)
+:   シナヒコ氏[@shinahiko_4715](https://twitter.com/shinahiko_4715)のブログ。なんかよくわからんと思っていたけど、素敵によくわからん。  
+通販[shinahiko](https://shinahiko.saleshop.jp/)もしているとは知らなかった。
+
 [最首塾 on the web](http://saishjuku.daynight.jp/index.html)
 :   丹波さん[@kushami_79](https://twitter.com/kushami_79)が管理している最首さん[@ssaishu](https://twitter.com/ssaishu)の私塾のホームページ。  
     例会や最首さんの近況については[最首塾のおしらせ](https://saishjuku.hatenablog.com/)。  
