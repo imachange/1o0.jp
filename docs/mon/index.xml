@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>問学研究会 on 1o0 Project</title>
+    <link>http://1o0.jp/mon/</link>
+    <description>Recent content in 問学研究会 on 1o0 Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 03 Dec 2020 10:52:26 +0900</lastBuildDate>
+    
+	<atom:link href="http://1o0.jp/mon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
