@@ -1,0 +1,8 @@
+{{ with .FirstSection }}
+<p><b><a href="{{ .RelPermalink }}">{{ .Title }}</b></p>
+<ul>
+{{ range .Sections }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+{{ end }}

@@ -2,8 +2,11 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 <ul>
-    {{ range .Data.Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})
-        {{ end }}
+    {{ range .Pages.ByDate.Reverse }}
+    <li>
+        <b><a href="{{.RelPermalink}}">{{.Title}}</a></b>
+        <time>{{.Date.Format "2006-01-02"}}</time>
+    </li>
+    {{ end }}
 </ul>
 {{ end }}

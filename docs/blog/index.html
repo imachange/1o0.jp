@@ -1,76 +1,184 @@
 <!DOCTYPE html>
 <html><title>今是記</title>
 <style>
-        body{
-            max-width:40rem;
-            color:#dbdbdb;
-            background-color: #464646;
-            overflow-wrap: break-word;
-　　        word-wrap: break-word;
-            }
-        a{
-            color: aquamarine;}
-        a:visited{
-            color: #bdbd}
-        code{
-            color:#f8f8f2;
-            background-color:#272822;
+    body {
+        max-width: 40rem;
+        color: #dbdbdb;
+        background-color: #464646;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    a {
+        color: aquamarine;
+    }
+    a:visited {
+        color: #bdbd
+    }
+    code {
+        color: #f8f8f2;
+        background-color: #272822;
+    }
+    pre {
+        background-color: #272822;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        white-space: pre-wrap;
+    }
+    pre>code[data-lang]:before {
+        content: attr(data-lang)"\A";
+        white-space: pre;}
+    .breadcrumb {
+      padding: 0;
+    }
+.breadcrumb li {
+  display: inline;
+  list-style: none;
 }
-        pre {
-            background-color:#272822;
-            -moz-tab-size:4;
-            -o-tab-size:4;
-            tab-size:4;
-            white-space: pre-wrap;
+.breadcrumb li:first-child {
+  display: inline;
+  list-style: none;
 }
-        pre > code[data-lang]:before{
-            content: attr(data-lang)"\A";
-            white-space: pre;
-    </style>
-    <body><div id="content">
+.breadcrumb li:not(:last-child)::after {
+  content: '>';
+  padding: 0 0.5em;
+}
+.xPrevNextLink::after {
+   
+  display: block;
+  content: "";
+  clear: both;
+}
+.xPrevNextLink_prev {
+  display: block;
+  float: left;
+}
+.xPrevNextLink_prev::before {
+  content: "≪";
+}
+.xPrevNextLink_next {
+  display: block;
+  float: right;
+  text-align: right;
+
+}
+.xPrevNextLink_next::after {
+  content: "≫";
+}
+</style><body>
+<p><b><a href="http://1o0.jp/blog/">今是記</b></p>
+<ul>
+
+</ul>
+<div id="content">
 <h1>今是記</h1>
 
 <ul>
     
-    <li><a href="http://1o0.jp/blog/202012/02-diary/">12月02日の日記 身内のCOVID-19感染疑惑とENHYPEN国内地上波初ステージ</a> (2020-12-02)
-        
-    <li><a href="http://1o0.jp/blog/202012/02-codeblock-name/">CSSだけでHugoのコードブロックにファイル名を表示させる</a> (2020-12-02)
-        
-    <li><a href="http://1o0.jp/blog/202012/02-arecibo-observatory/">アレシボ天文台の崩壊</a> (2020-12-02)
-        
-    <li><a href="http://1o0.jp/blog/202012/02-check-404-github-pages/">GitHubPagesが404になったときの対処</a> (2020-12-02)
-        
-    <li><a href="http://1o0.jp/blog/202012/01-diary/">12月01日の日記　暦の上ではディセンバー</a> (2020-12-01)
-        
-    <li><a href="http://1o0.jp/blog/202011/30-diary/">半影月食とENHYPENデビュー</a> (2020-11-30)
-        
-    <li><a href="http://1o0.jp/blog/202011/29-mst_mt-aduma/">【妄想トラベル】真妻山(和歌山)</a> (2020-11-29)
-        
-    <li><a href="http://1o0.jp/blog/202011/27-bladerunner/">【映画】「ブレードランナー　ファイナルカット」人は人造人間を裁けるか</a> (2020-11-27)
-        
-    <li><a href="http://1o0.jp/blog/202011/27-apocalypse-now/">【映画】「地獄の黙示録」40年前の地獄絵図を観た</a> (2020-11-27)
-        
-    <li><a href="http://1o0.jp/blog/202011/26-rest-in-peace/">訃報四件に思うこと マラドーナ氏、矢口高雄さん、尾上利夫さん、川上敏行さん</a> (2020-11-26)
-        
-    <li><a href="http://1o0.jp/blog/202011/25-memorial-patriotism/">憂国忌半世紀目</a> (2020-11-25)
-        
-    <li><a href="http://1o0.jp/blog/202011/18-jormungand-02/">ヨルムンガンド02話　意外と少年兵は笑う</a> (2020-11-18)
-        
-    <li><a href="http://1o0.jp/blog/202011/18-trust2write/">小峰さんの哲学実践ツイートに思ったこと</a> (2020-11-18)
-        
-    <li><a href="http://1o0.jp/blog/202011/17-jormungand-01/">ヨルムンガンド01話　「武器商人と旅をした」</a> (2020-11-17)
-        
-    <li><a href="http://1o0.jp/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/">アウシュヴィッツを知らない大学生の『アンネの日記』の読み方のメモ</a> (2020-11-16)
-        
-    <li><a href="http://1o0.jp/blog/202011/15-check-switch-dns/">DNSの切り替え待ちで確認すること</a> (2020-11-15)
-        
-    <li><a href="http://1o0.jp/blog/202011/15-k-pop-make-sekai-hot/">アイドル沼にハマった風景</a> (2020-11-15)
-        
-    <li><a href="http://1o0.jp/blog/202011/14-moving-vercel-github/">VercelからGitHubPageへの引っ越し</a> (2020-11-14)
-        
-    <li><a href="http://1o0.jp/blog/202011/14-hello-blog/">ブログ書き始め</a> (2020-11-14)
-        
+    <li>
+        <b><a href="http://1o0.jp/blog/202012/02-diary/">12月02日の日記 身内のCOVID-19感染疑惑とENHYPEN国内地上波初ステージ</a></b>
+        <time>2020-12-02</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202012/02-arecibo-observatory/">アレシボ天文台の崩壊</a></b>
+        <time>2020-12-02</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202012/02-codeblock-name/">CSSだけでHugoのコードブロックにファイル名を表示させる</a></b>
+        <time>2020-12-02</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202012/02-check-404-github-pages/">GitHubPagesが404になったときの対処</a></b>
+        <time>2020-12-02</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202012/01-diary/">12月01日の日記　暦の上ではディセンバー</a></b>
+        <time>2020-12-01</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/30-diary/">半影月食とENHYPENデビュー</a></b>
+        <time>2020-11-30</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/29-mst_mt-aduma/">【妄想トラベル】真妻山(和歌山)</a></b>
+        <time>2020-11-29</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/27-bladerunner/">【映画】「ブレードランナー　ファイナルカット」人は人造人間を裁けるか</a></b>
+        <time>2020-11-27</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/27-apocalypse-now/">【映画】「地獄の黙示録」40年前の地獄絵図を観た</a></b>
+        <time>2020-11-27</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/26-rest-in-peace/">訃報四件に思うこと マラドーナ氏、矢口高雄さん、尾上利夫さん、川上敏行さん</a></b>
+        <time>2020-11-26</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/25-memorial-patriotism/">憂国忌半世紀目</a></b>
+        <time>2020-11-25</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/18-jormungand-02/">ヨルムンガンド02話　意外と少年兵は笑う</a></b>
+        <time>2020-11-18</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/18-trust2write/">小峰さんの哲学実践ツイートに思ったこと</a></b>
+        <time>2020-11-18</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/17-jormungand-01/">ヨルムンガンド01話　「武器商人と旅をした」</a></b>
+        <time>2020-11-17</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/16-how-to-read-the-diary-of-anne-who-dont-know-auschwitz/">アウシュヴィッツを知らない大学生の『アンネの日記』の読み方のメモ</a></b>
+        <time>2020-11-16</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/15-check-switch-dns/">DNSの切り替え待ちで確認すること</a></b>
+        <time>2020-11-15</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/15-k-pop-make-sekai-hot/">アイドル沼にハマった風景</a></b>
+        <time>2020-11-15</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/14-moving-vercel-github/">VercelからGitHubPageへの引っ越し</a></b>
+        <time>2020-11-14</time>
+    </li>
+    
+    <li>
+        <b><a href="http://1o0.jp/blog/202011/14-hello-blog/">ブログ書き始め</a></b>
+        <time>2020-11-14</time>
+    </li>
+    
 </ul>
 
-        </div></body>
+        </div>
+
+
+<div class="xPrevNextLink">
+    
+    
+</div>
+<hr>
+<a href="http://1o0.jp/">1o0 Project</a></body>
 </html>

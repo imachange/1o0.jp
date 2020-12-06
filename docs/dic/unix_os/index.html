@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html><title>UNIX(OS)</title>
 <style>
-        body{
-            max-width:40rem;
-            color:#dbdbdb;
-            background-color: #464646;
-            overflow-wrap: break-word;
-　　        word-wrap: break-word;
-            }
-        a{
-            color: aquamarine;}
-        a:visited{
-            color: #bdbd}
-        code{
-            color:#f8f8f2;
-            background-color:#272822;
+    body {
+        max-width: 40rem;
+        color: #dbdbdb;
+        background-color: #464646;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    a {
+        color: aquamarine;
+    }
+    a:visited {
+        color: #bdbd
+    }
+    code {
+        color: #f8f8f2;
+        background-color: #272822;
+    }
+    pre {
+        background-color: #272822;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        white-space: pre-wrap;
+    }
+    pre>code[data-lang]:before {
+        content: attr(data-lang)"\A";
+        white-space: pre;}
+    .breadcrumb {
+      padding: 0;
+    }
+.breadcrumb li {
+  display: inline;
+  list-style: none;
 }
-        pre {
-            background-color:#272822;
-            -moz-tab-size:4;
-            -o-tab-size:4;
-            tab-size:4;
-            white-space: pre-wrap;
+.breadcrumb li:first-child {
+  display: inline;
+  list-style: none;
 }
-        pre > code[data-lang]:before{
-            content: attr(data-lang)"\A";
-            white-space: pre;
-    </style>
-    <body><div id="content">
+.breadcrumb li:not(:last-child)::after {
+  content: '>';
+  padding: 0 0.5em;
+}
+.xPrevNextLink::after {
+   
+  display: block;
+  content: "";
+  clear: both;
+}
+.xPrevNextLink_prev {
+  display: block;
+  float: left;
+}
+.xPrevNextLink_prev::before {
+  content: "≪";
+}
+.xPrevNextLink_next {
+  display: block;
+  float: right;
+  text-align: right;
+
+}
+.xPrevNextLink_next::after {
+  content: "≫";
+}
+</style><body>
+<p><b><a href="http://1o0.jp/dic/">辞書</b></p>
+<ul>
+
+</ul>
+<div id="content">
 <h1>UNIX(OS)</h1>
 <p><dfn>UNIX</dfn>とは、<strong>OS X</strong>(Mac OS X)や<strong>Microsoft Windows</strong>と同じ基本ソフト<abbr title="Operating System">OS</abbr>の一種。</p>
 <p>1969年にAT&amp;T社のベル研究所で開発がはじまり、その直系の<strong>System V</strong>と、カリフォルニア大学バークレー校の研究グループによる<abbr title="Berkley Software Destribution">BSD</abbr>の2つの流派に分かれた。</p>
@@ -48,11 +91,18 @@
 <dd>Apple社のMacにつかわれている。DarwinというUNIX系OSを基本部分にしている。</dd>
 </dl>
 
-<hr>
-<ol class="nav navbar-nav"><li><a href="http://1o0.jp/">1o0 Project</a></li>
-    <li><a href="http://1o0.jp/dic/">辞書</a></li>
-    <li class="active" ><a href="http://1o0.jp/dic/unix_os/">UNIX(OS)</a></li>
-    </ol>
 
-        </div></body>
+        </div>
+
+
+<div class="xPrevNextLink">
+    
+    <div class="xPrevNextLink_prev">
+        <a href="http://1o0.jp/dic/unix_shell/">シェル(UNIX)</a>
+    </div>
+    
+    
+</div>
+<hr>
+<a href="http://1o0.jp/">1o0 Project</a></body>
 </html>

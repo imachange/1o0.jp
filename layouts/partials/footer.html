@@ -1,0 +1,11 @@
+{{ with .CurrentSection }}
+{{ if ne .File.Path .FirstSection.File.Path }}
+<hr>
+    <ol class="breadcrumb">
+        {{- template "breadcrumb" (dict "node" . "start" .) }}
+    </ol>
+{{ end }}
+{{ end }}
+{{ partial "prev-next" . }}
+<hr>
+<a href="/">{{ .Site.Title }}</a>
