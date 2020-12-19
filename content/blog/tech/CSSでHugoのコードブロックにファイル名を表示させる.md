@@ -5,7 +5,7 @@ draft: false
 slug: "codeblock-name"
 category:
 - "試考作誤"
-tag:
+tags:
 - "Hugo"
 - "CSS"
 ---
